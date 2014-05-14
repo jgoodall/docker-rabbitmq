@@ -20,7 +20,7 @@ EXPOSE 55672
 ADD run.sh /run.sh
 ADD start_rabbitmq.sh /start_rabbitmq.sh
 ADD set_rabbitmq_password.sh /set_rabbitmq_password.sh
-ADD supervisor-rabbitmq.conf /etc/supervisor/conf.d/rabbitmq.conf
+ADD supervisord-rabbitmq.conf /etc/supervisor/conf.d/rabbitmq.conf
 
 RUN chmod 755 /*.sh
 
