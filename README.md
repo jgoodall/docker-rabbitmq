@@ -17,18 +17,18 @@ To build the image:
 
 To run the rabbitmq container:
 
-    docker run --name=rabbitmq --rm -e RABBITMQ_PASS="mypass" -p 5672:5672 -p 15672:15672 jgoodall/rabbitmq
+    docker run --name=rabbitmq --rm -e RABBITMQ_PASS="mypass" -p 5672:5672 -p 55672:55672 jgoodall/rabbitmq
 
 To forward ports so you can use `rabbitmqadmin` on your Mac, open new terminals and run the following (and leave the terminals running):
 
     boot2docker ssh -L 5672:localhost:5672
-    boot2docker ssh -L 15672:localhost:15672
+    boot2docker ssh -L 55672:localhost:55672
 
 To run the container in detached mode:
 
-    rabbitmq=$(docker run --name=rabbitmq -d -e RABBITMQ_PASS="mypass" -p :5672 -p :15672 jgoodall/rabbitmq)
+    rabbitmq=$(docker run --name=rabbitmq -d -e RABBITMQ_PASS="mypass" -p :5672 -p :55672 jgoodall/rabbitmq)
     rmq_port=$(docker port $rabbitmq 5672 | cut -d':' -f2)
-    rmq_admin_port=$(docker port $rabbitmq 15672 | cut -d':' -f2)
+    rmq_admin_port=$(docker port $rabbitmq 55672 | cut -d':' -f2)
 
 To push this info to `etcd`:
 
