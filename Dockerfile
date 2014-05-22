@@ -11,6 +11,7 @@ RUN apt-get -qy install supervisor curl git
 # Install RabbitMQ
 RUN apt-get install -qy rabbitmq-server pwgen
 RUN rabbitmq-plugins enable rabbitmq_management
+RUN /etc/init.d/rabbitmq-server stop
 
 EXPOSE 5672
 EXPOSE 55672
