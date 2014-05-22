@@ -1,7 +1,7 @@
 docker-rabbitmq
 ===============
 
-Docker image for rabbitmq which will announce its configuration to [etcd](https://github.com/coreos/etcd).
+Docker image for rabbitmq.
 
 To use Docker on a Mac, install docker and boot2docker:
 
